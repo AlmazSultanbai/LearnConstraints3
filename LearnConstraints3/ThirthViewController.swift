@@ -8,9 +8,24 @@
 import UIKit
 
 class ThirthViewController: UIViewController {
+    
+    private lazy var titleLabel: UILabel = {
+        let view = UILabel()
+        view.text = "Salam"
+        view.font = .systemFont(ofSize: 12, weight: .semibold, width: .expanded)
+        view.backgroundColor = .gray
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .systemBackground
+        view.addSubview(titleLabel)
+        
+        titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        titleLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
         // Do any additional setup after loading the view.
     }
